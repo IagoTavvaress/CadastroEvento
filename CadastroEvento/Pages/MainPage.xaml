@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroEvento.Pages.MainPage"
+             Title="Cadastro de Evento">
+    <StackLayout Padding="20">
+        <Label Text="Nome do Evento" />
+        <Entry Text="{Binding Evento.Nome}" />
+
+        <Label Text="Data de Início" />
+        <DatePicker 
+            Date="{Binding Evento.DataInicio}"
+            MinimumDate="2024-11-20"
+            MaximumDate="2024-12-20"
+            Format="dd/MM/yyyy" />
+
+        <Label Text="Data de Término" />
+        <DatePicker 
+            Date="{Binding Evento.DataTermino}"
+            MinimumDate="2024-11-20"
+            MaximumDate="2024-12-20"
+            Format="dd/MM/yyyy" />
+
+        <Label Text="Número de Participantes" />
+        <Entry Text="{Binding Evento.NumeroParticipantes}" Keyboard="Numeric" />
+
+        <Label Text="Local do Evento" />
+        <Entry Text="{Binding Evento.Local}" />
+
+        <Label Text="Custo por Participante" />
+        <Entry Text="{Binding Evento.CustoPorParticipante}" Keyboard="Numeric" />
+
+        <Button Text="Cadastrar Evento" Command="{Binding CadastrarEventoCommand}" />
+    </StackLayout>
+</ContentPage>
+
+
+
+
+
+
+       
